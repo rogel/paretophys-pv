@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paretophys-pv"
+version = "0.1.0"
+description = "Compact day-ahead PV forecasting with bounded residual models and multi-objective search"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26,<3",
+  "pandas>=2.1,<3",
+  "torch>=2.5,<3",
+  "pymoo>=0.6,<0.7",
+  "PyYAML>=6,<7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+solar = ["pvlib>=0.10,<1"]
+
+[project.scripts]
+paretophys = "paretophys_pv.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
