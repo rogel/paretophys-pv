@@ -1,0 +1,14 @@
+lookback: 168
+backbone: dlinear
+hidden_width: 32
+layers: 1
+dropout: 0.0
+patch_length: 12
+stride: 6
+state_mask: 15
+residual_width: 16
+gate: scalar
+correction_cap: 0.10
+lambda_r: 0.0
+lambda_s: 0.0
+learning_rate: 0.001
