@@ -1,0 +1,10 @@
+format_version: 1
+data:
+  history_length: 168
+  prediction_length: 24
+  split:
+    # Inclusive forecast-origin dates; the first seven days supply history.
+    frozen_boundaries:
+      train: {start: '2012-04-01', end: '2013-10-26'}
+      validation: {start: '2013-10-27', end: '2014-02-26'}
+      test: {start: '2014-02-27', end: '2014-06-30'}
