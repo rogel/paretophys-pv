@@ -92,6 +92,8 @@ Data sources:
 
 See [data preparation and access details](docs/data.md) for timestamp conventions, dataset characteristics, and download routes.
 
+For GEFCom2014 Solar Task 15, the [standalone preprocessing guide](docs/gefcom.md) provides raw-CSV conversion, a dated split configuration, reference-curve and feature construction, output schemas, and CPU-only commands. These tools have a dataset-specific tensor interface and run independently of model training.
+
 ## Package layout
 
 ```text
