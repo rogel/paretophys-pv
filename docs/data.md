@@ -40,7 +40,7 @@ The conversion of raw state archives to the canonical table remains dataset-spec
 
 Use the solar track within the archive. It contains normalized power and numerical weather prediction variables for three zones. Provider download endpoints may require browser access; if an older mirror is unavailable, consult the source page or publisher archive.
 
-The raw solar-track format is not the canonical hourly input schema. A dataset-specific adapter must establish issue times, build a day-ahead reference curve from information available at issuance, and map weather descriptors into the model's feature groups. Fit any irradiance scale or normalization on training data only. Do not substitute future realized power for an unavailable forecast curve. Missing location information should be represented explicitly through a documented neutral mapping, without inventing coordinates. No automatic GEFCom conversion is bundled.
+The raw solar-track format is not the canonical hourly input schema. A dataset-specific adapter must establish issue times, build a day-ahead reference curve from information available at issuance, and map weather descriptors into the model's feature groups. Fit any irradiance scale or normalization on training data only. Do not substitute future realized power for an unavailable forecast curve. Missing location information should be represented explicitly through a documented neutral mapping, without inventing coordinates. The [standalone GEFCom converter](gefcom.md) provides raw-CSV auditing, window generation, reference-curve construction, and feature mapping with an explicit split configuration. Its dataset-specific output interface is documented separately from the core CLI bundle below.
 
 ## Canonical hourly CSV
 
